@@ -8,8 +8,8 @@ const bucket = new aws.s3.Bucket("pk-file-test", {
 
 const bucketObject = new aws.s3.BucketObject("bucketObject", {
     bucket: bucket.bucket,
-    source: new pulumi.asset.FileAsset("file.txt"),
-    key: "file.txt"
+    source: new pulumi.asset.FileAsset("file"),
+    key: "file"
 });
 
 const awsRegion = aws.getRegionOutput();
